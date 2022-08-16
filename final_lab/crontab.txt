@@ -1,0 +1,19 @@
+# get python3's location
+which python3
+
+# add jobs to CRON
+crontab -e
+* * * * * /usr/bin/python3 /home/student-03-c1d59723e4a6/health_check.py
+* * * * * /bin/bash -l -c 'date >> ~/cron-test.txt'
+
+# check jobs
+crontab -l
+
+# verify output from the log and test job (cron-test)
+sudo grep CRON /var/log/syslog
+cat ~/cron-test.txt
+tail -f /var/log/syslog | grep CRON
+
+# how to use environment variables in CRON jobs
+https://stackoverflow.com/questions/42114982/environment-variables-when-script-run-by-cron
+https://www.baeldung.com/linux/load-env-variables-in-cron-job
