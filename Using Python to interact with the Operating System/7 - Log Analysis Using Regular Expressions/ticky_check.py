@@ -19,7 +19,7 @@ def parse_log(log_file):
     with open(log_file, 'r') as log:
         for line in log:
             # let's read the log file line by line
-            # he strip() method removes any leading (spaces at the beginning) and trailing (spaces at the end)
+            # the strip() method removes any leading (spaces at the beginning) and trailing (spaces at the end)
             entry = line.strip()
             entry = re.search(r"(?P<message_type>ERROR|INFO) (?P<message>[\w ]*).*\((?P<username>\w*\.?\w*)\)", line)
             type = entry.group('message_type')
