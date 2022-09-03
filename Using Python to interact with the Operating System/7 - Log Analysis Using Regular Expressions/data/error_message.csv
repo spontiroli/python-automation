@@ -1,0 +1,4 @@
+Error,Count
+Connection to DB failed,4
+Timeout while retrieving information,3
+The ticket was modified while updating,2
