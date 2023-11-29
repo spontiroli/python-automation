@@ -1,2 +1,2 @@
-# google-python-automation
-Google IT Automation with Python Professional Certificate
+# python-automation
+Automation with Python
